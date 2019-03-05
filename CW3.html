@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Regular Expressions </title>
+  <style>
+  /* pre { border: solid 1px } */
+    #pat { width: 170px; }
+    #inp { width: 310px; }
+    .found { color: #F60; }
+  </style>
+</head>
+
+<body>
+<h2 id=title></h2>
+
+<p>
+Pattern <input type=text id=pat onKeyUp="checkRE()">&emsp; 
+<select id=menu onChange="setValues()">
+<option>Letter<option>Number<option>Suffix<option>x+letter<option>Gmail Address<option>Date
+</select> 
+</p>
+<p>
+Input <input type=text id=inp onKeyUp="checkRE()">
+</p>
+<p id=out></p>
+
+<hr />
+<b>Sample code</b>
+<pre id=sample></pre>
+<hr />
+<p>Ref: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" target="ExternalDocument">Regular Expressions</a>
+</p>
+
+<script>
+"use strict";
+const ptrn = ["[a-z]", "[0-9]{4}", "d[iuü][km]", "x[a-z]","[a-z._0-9]+@gmail.com","[[0-3][0-9][.][0-9]{2}[.][0-9]{4}"];
+const word = 
+    ["Bir iki üç dört beş altı ", "Bugün 23/6/2018 saat 14",
+     "Geldim gördüm buldum...", "Excellent expression tax ", "my mail is feyzanur.saka_1996@gmail.com","The meeting date is 21.09.2019"];
+function setValues() {
+    pat.value = ptrn[menu.selectedIndex];
+    inp.value = word[menu.selectedIndex];
+    checkRE();
+}
+function checkRE() {
+    if (pat.value && inp.value) {
+        const exp = new RegExp(pat.value,'g');
+        const str = "<span class=found>$&</span>";
+        out.innerHTML = inp.value.replace(exp, str);
+    }
+}
+    sample.innerText = setValues.toString()+"\n"+checkRE.toString();
+    title.innerText = document.title; setValues();
+</script>
+
+</body>
+</html>
