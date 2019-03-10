@@ -1,4 +1,5 @@
 # Auto
 <h3>CLASSWORKS</h3>
-<ul>(https://feyzanursaka.github.io/Auto/CW3.html)</ul> 
-
+<ul>
+  <li><a href="https://feyzanursaka.github.io/Auto/CW3.html" rel="nofollow">Pattern</a> - CW3</li>
+</ul>
