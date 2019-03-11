@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <h1> Regular Expressions for Arrays and Strings </h1>
+</head>
+<style> 
+	pre { border: solid 1px;  width: 650px; }
+	#out {border: solid 1px;  width: 650px; }
+    .foundArray {
+        color: red;
+      }
+    .foundString { 
+		color: blue; 
+</style>
+<body>
+<h2 id=title></h2>
+<b>Input : </b>
+</br></br>
+<textarea input type=text id=inp  style="width:650px" onKeyUp="checkRE()" rows="10" cols="1000">
+</textarea></br>
+<b>Output : </b>
+<p id=out></p>
+<b>Sample code : </b>
+<pre id=sample></pre>
+<p>Ref: <a href="https://emrahtema.github.io/Automata/regexp/EmrahTema_Regexp.html"," target="ExternalDocument">Term project by Emrah Tema</a>,
+<a href="https://ceaksan.com/tr/regex-regular-expressions-nedir/">ceaksan</a></p>
+<script>
+"use strict";
+var values = " ";
+const arr = "var vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot']; \nvar fruits = [\"Apple\", \"Banana\", \"Orange\"]; \nvar years = [1950, 1960, 1970, 1980, 1990, 2000, 2010];\n";	
+const str = "let longString = \"This is a very long string which needs \" + \n\t\t \"to wrap across multiple lines because \" + \n\t\t \"otherwise my code is unreadable.\" ;";
+function setValues() {
+   inp.value=arr+str;
+    checkRE();
+}
+function checkRE() {
+    if (inp.value) {
+        let expArray = new RegExp(/\[[\S ]+\]/, 'g');
+        let strArray = "<span class=foundArray>$&</span>";
+        values = inp.value.replace(expArray, strArray);
+		let expString = new RegExp(/[^\[]\"[\w|\s.]+\"[^\]|^,]/, 'g');
+        let strString = "<span class=foundString>$&</span>";
+        values = values.replace(expString, strString).split("\n").join("<br>");		
+		out.innerHTML = values;
+	}
+}
+    sample.innerText = setValues.toString()+"\n"+checkRE.toString();
+    title.innerText = document.title; setValues();
+</script>
+</body>
+</html>
