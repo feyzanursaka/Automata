@@ -7,5 +7,5 @@
 </ul>
 <h3>HOMEWORKS</h3>
 <ul>
-  <li><a href="https://feyzanursaka.github.io/Auto/HW1.png" rel="nofollow">Regular Expressions for Arrays & Strings</a> - HW1</li>
+  <li><a href="https://feyzanursaka.github.io/Auto/HW1.html" rel="nofollow">Regular Expressions for Arrays & Strings</a> - HW1</li>
 </ul>
