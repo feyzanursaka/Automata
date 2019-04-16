@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" media="all"
+          href="https://maeyler.github.io/JS/sss/inspector.css">
+    <script src="https://maeyler.github.io/JS/sss/inspector.js"></script>
+    <script src="Lexical.js"></script>
+    <title>Lexical Analysis </title>
+  <style>
+    body  { background: #ddd; }
+    #pat { width: 220px; }
+    #inx { width: 300px; }
+    #outx { font: 12px monospace; }
+  </style>
+</head>
+
+<body>
+<h2 id=title></h2>
+
+<p>
+Pattern <input type=text id=pat>
+<input type=button value="Check" onClick="checkRE()">
+</p>
+<p>
+Text 
+<textarea id=inx rows=6">
+  var sum = 55-40/2.5;
+  if (sum >= -3.645)
+    println "m = " != m:23;
+  print "(8.7-c)/2*a87";
+  print  (8.7-c)/2*a87;
+</textarea>
+</p>
+<p id=outx></p>
+<hr />
+
+<script>
+"use strict";
+function checkRE() {
+    let ptn = pat.value, str = inx.value
+    if (!ptn || !str) return
+    let list = Token.list(str, ptn)
+    let y = list.map(x => x.kind)
+    outx.innerHTML = y.join(' ')+'<BR>'+y.length+" tokens"
+    console.log(list); display(str);  display(list); 
+    return list
+}
+function init() {
+    MENU = new Menu() //extends Menu
+    MENU.global = window
+    display(MENU)
+}
+    title.innerText = document.title
+    pat.value = Token.stripQuotes(EXP, 1, 2)
+    try {
+        inspect(document.body, init)
+        //inp.value = "a"; display(a)
+    } catch(e) {
+        reportError(e);
+    }
+</script>
+
+</body>
+</html>
