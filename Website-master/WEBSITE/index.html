@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="site.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="style2.css">
+	<body>
+		<nav class="menü">
+			<a href="#s1" class="down">Home</a>
+			<a href="#s3" class="down">What is Regex</a>
+			<a href="#s5" class="down">How to use</a>
+			<a href="#s6" class="down">Contact</a>
+		
+		</nav>
+
+		<div id="s1" class="sayfa">
+			<img src="REGEX.jpg">
+			<div class="filtre"></div>
+			<div class="yazı">
+				<h1> Regular Expression</h1>
+			<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width">
+				
+				<style>
+					/* pre { border: solid 1px } */
+					#pat { width: 110px;height:25px; }
+					#inp { width: 330px;height:25px; }
+					.found { color: orange; }
+					#menu {height:30px;}
+				</style>
+			</head>
+
+
+		<h2 id=title></h2>
+
+		<p>
+			Pattern <input type=text id=pat onKeyUp="checkRE()">&emsp; 
+			<select id=menu onChange="setValues()">
+				<option>Letter<option>Number<option>Suffix<option>x+letter
+			</select> 
+		</p>
+		<p>
+			Input <input type=text id=inp onKeyUp="checkRE()">
+		</p>
+		<p id=out></p>
+		<pre id=sample></pre>
+	<script>
+"use strict";
+const ptrn = ["[a-z]", "[0-9]{4}", "d[iuü][km]", "x[a-z]"];
+const word = 
+    ["Bir iki üç dört beş altı ", "Bugün 23/6/2018 saat 14",
+     "Geldim gördüm buldum...", "Excellent expression tax "];
+function setValues() {
+    pat.value = ptrn[menu.selectedIndex];
+    inp.value = word[menu.selectedIndex];
+    checkRE();
+}
+function checkRE() {
+    if (pat.value && inp.value) {
+        const exp = new RegExp(pat.value,'g');
+        const str = "<span class=found>$&</span>";
+        out.innerHTML = inp.value.replace(exp, str);
+    }
+}
+  
+    title.innerText = document.title; setValues();
+</script>
+			</div>
+		</div>
+		
+		<div id="s3" class="sayfa">
+			<div class="filtre">
+			<article>
+				<h2>What is Regex</h2>
+				<p>	Short for regular expression, a regex is a string of text that allows you to create patterns that help match, locate, and manage text. Perl is a great example of a programming language that utilizes regular expressions. However, its only one of the many places you can find regular expressions. Regular expressions can also be used from the command line and in text editors to find text within a file.</p>
+				<p>When first trying to understand regular expressions it seems as if it is a different language. However, mastering regular expressions can save you thousands of hours if you work with text or need to parse large amounts of data.</p>
+				<h2>Where to use</h2>
+				<p>Many programming languages, operating system commands, database queries and search applications uses Regular Expression. We are going to use it on HTML inputs for specifical input type like Social ID, phone number, email, credit card number and validation date etc.</p>
+			</article>
+			</div>
+		</div>
+		
+		<div id="s5" class="sayfa">
+			<div class="filtre"></div>
+			<div class="vid">
+				<iframe width="600" height="300" src="https://www.youtube.com/embed/909NfO1St0A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe class="vid2" width="145" height="150" src="https://www.youtube.com/embed/r6I-Ahc0HB4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe width="145" height="150" src="https://www.youtube.com/embed/paOPoZyjzdg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe width="145" height="150" src="https://www.youtube.com/embed/7DG3kCDx53c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe width="145" height="150" src="https://www.youtube.com/embed/ykSuHWhh5hc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				
+			</div>
+		<div class="bnt">
+		
+		<section>
+		
+			<article>
+				<h1>How to Use</h1></br>
+				   <p>A regular expression pattern is composed of </p>
+				   <p>simple characters, such as /abc/, or a </p>
+				   <p>combination of simple and special characters,</p>
+				   <p>such as /ab*c/ or /Chapter (\d+)\.\d*/. </p>
+				   <p>The last example includes parentheses which</p>
+				   <p>are used as a memory device. The match made</p>
+				   <p>with this part of the pattern is remembered</p>
+				   <p>for later use.</p><br> 
+				<h2>Watch videos for more info . .</h2>
+			</article>
+			
+		</section>
+		</div>
+		</div>
+		
+		<div id="s6" class="bant">
+		
+			<div class="sosyal">
+				<ul>
+					<li><a href="https://www.facebook.com/regexshow/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+					<li><a href="https://twitter.com/RegexTip"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="https://tr.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+					<li><a href="https://tr.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.youtube.com/watch?v=upu_TeZImN0"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.google.com.tr/imghp"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+			
+			<div class="foot">Copyright © 2019 Tema - Designed by <a href="https://www.instagram.com/feyzanurska/">Feyza Nur SAKA</div>
+		</div>
+	</body>
+	</head>
+</html>
+
+
+
+
+
+
+
+
+
