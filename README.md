@@ -8,12 +8,12 @@
   <li><a href="https://feyzanursaka.github.io/Automata/CW5/Expression.html" rel="nofollow">Parser</a> - CW5</li>
   <li><a href="https://feyzanursaka.github.io/Automata/PDA1.html" rel="nofollow">PDA for Addition</a> - CW6</li>
   <li><a href="https://feyzanursaka.github.io/Automata/CW7/microJ3.html" rel="nofollow">Factoriyel</a> - CW7</li>
+    <li><a href="https://feyzanursaka.github.io/Automata/Website-master/WEBSITE/index.html" rel="nofollow">Regex Website</a> - CW9</li>
 </ul>
 <h3>HOMEWORKS</h3>
 <ul>
   <li><a href="https://feyzanursaka.github.io/Automata/HW1.html" rel="nofollow">Regular Expressions for Arrays & Strings</a> - HW1</li>
   <li><a href="https://feyzanursaka.github.io/Automata/HW2/Expression.html" rel="nofollow">Mod & Functions</a> - HW2</li>
   <li><a href="https://feyzanursaka.github.io/Automata/HW3/microJ1.html" rel="nofollow">MicroJ1</a> - HW3</li>
-  <li><a href="https://feyzanursaka.github.io/Automata/Website-master/WEBSITE/index.html" rel="nofollow">Regex Website</a> - HW4</li>
   
 </ul>
