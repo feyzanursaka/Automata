@@ -12,7 +12,7 @@
 <h3>HOMEWORKS</h3>
 <ul>
   <li><a href="https://feyzanursaka.github.io/Automata/HW1.html" rel="nofollow">Regular Expressions for Arrays & Strings</a> - HW1</li>
-  <li><a href="https://feyzanursaka.github.io/Automata/HW1.html" rel="nofollow">HW2-Mod & Functions</a> - HW2</li>
+  <li><a href="https://feyzanursaka.github.io/Automata/HW2/Expression.html" rel="nofollow">Mod & Functions</a> - HW2</li>
   <li><a href="https://feyzanursaka.github.io/Automata/HW3/microJ1.html" rel="nofollow">MicroJ1</a> - HW3</li>
   <li><a href="https://feyzanursaka.github.io/Automata/Website-master/WEBSITE/index.html" rel="nofollow">Regex Website</a> - HW4</li>
   
