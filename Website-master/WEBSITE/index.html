@@ -2,9 +2,11 @@
 <html>
 	<head>
 		
+		 <meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="site.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,6 +14,7 @@
 	<body>
 		<nav class="menü">
 			<a href="#s1" class="down">Home</a>
+			<a href="#s2" class="down">Used Patterns</a>
 			<a href="#s3" class="down">What is Regex</a>
 			<a href="#s5" class="down">How to use</a>
 			<a href="#s6" class="down">Contact</a>
@@ -73,12 +76,22 @@ function checkRE() {
 </script>
 			</div>
 		</div>
-		
+				<div id="s2" class="sayfa">
+			<div class="filtre">
+			<article>
+				<h2>Descriptions of Patterns</h2>
+				<p>[a-z] : Find all lowercase letters in the alphabet.</p>
+				<p>[0-9]{4} : Find four of the numbers from 0 to 9, along with four.</p>
+				<p>d[iuü][km] : Find d letter, one of the letters i or ü or u, one of the letters k or m, that come one after another.</p>
+				<p>x[a-z] : Finds the lowercase letter after x and x.</p>
+				</article>
+			</div>
+		</div>
 		<div id="s3" class="sayfa">
 			<div class="filtre">
 			<article>
 				<h2>What is Regex</h2>
-				<p>	Short for regular expression, a regex is a string of text that allows you to create patterns that help match, locate, and manage text. Perl is a great example of a programming language that utilizes regular expressions. However, its only one of the many places you can find regular expressions. Regular expressions can also be used from the command line and in text editors to find text within a file.</p>
+				<p>Short for regular expression, a regex is a string of text that allows you to create patterns that help match, locate, and manage text. Perl is a great example of a programming language that utilizes regular expressions. However, its only one of the many places you can find regular expressions. Regular expressions can also be used from the command line and in text editors to find text within a file.</p>
 				<p>When first trying to understand regular expressions it seems as if it is a different language. However, mastering regular expressions can save you thousands of hours if you work with text or need to parse large amounts of data.</p>
 				<h2>Where to use</h2>
 				<p>Many programming languages, operating system commands, database queries and search applications uses Regular Expression. We are going to use it on HTML inputs for specifical input type like Social ID, phone number, email, credit card number and validation date etc.</p>
@@ -102,14 +115,14 @@ function checkRE() {
 		
 			<article>
 				<h1>How to Use</h1></br>
-				   <p>A regular expression pattern is composed of </p>
-				   <p>simple characters, such as /abc/, or a </p>
-				   <p>combination of simple and special characters,</p>
-				   <p>such as /ab*c/ or /Chapter (\d+)\.\d*/. </p>
-				   <p>The last example includes parentheses which</p>
-				   <p>are used as a memory device. The match made</p>
-				   <p>with this part of the pattern is remembered</p>
-				   <p>for later use.</p><br> 
+				   <p>A regular expression pattern is composed of 
+				   simple characters, such as /abc/, or a 
+				   combination of simple and special characters,
+				   such as /ab*c/ or /Chapter (\d+)\.\d*/. 
+				   The last example includes parentheses which
+				   are used as a memory device. The match made
+				   with this part of the pattern is remembered
+				   for later use.</p><br> 
 				<h2>Watch videos for more info . .</h2>
 			</article>
 			
