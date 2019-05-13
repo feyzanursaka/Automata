@@ -52,7 +52,7 @@ nav a:hover{
 	height: 12%;
 	position: absolute;
 	z-index: 9999;
-	margin-left: 2%;
+	margin-left: 0%;
 	position: fixed;
 }
 #s1 .filtre{
