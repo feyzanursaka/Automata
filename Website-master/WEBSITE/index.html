@@ -5,7 +5,7 @@
 		 <meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=0.85">
 		
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="site.js"></script>
@@ -32,8 +32,8 @@
 				
 				<style>
 					/* pre { border: solid 1px } */
-					#pat { width: 110px;height:25px; }
-					#inp { width: 330px;height:25px; }
+					#pat { width: 210px;height:25px; }
+					#inp { width: 390px;height:25px; }
 					.found { color: orange; }
 					#menu {height:30px;}
 				</style>
@@ -43,9 +43,9 @@
 		<h2 id=title></h2>
 
 		<p>
-			Pattern <input type=text id=pat onKeyUp="checkRE()">&emsp; 
+			Pattern <input type=text id=pat onKeyUp="checkRE()">
 			<select id=menu onChange="setValues()">
-				<option>Letter<option>Number<option>Suffix<option>x+letter
+				<option>Gmail Adress<option>Date<option>Letter<option>Number<option>Suffix<option>x+letter
 			</select> 
 		</p>
 		<p>
@@ -55,9 +55,10 @@
 		<pre id=sample></pre>
 	<script>
 "use strict";
-const ptrn = ["[a-z]", "[0-9]{4}", "d[iuü][km]", "x[a-z]"];
+const ptrn = ["[a-z._0-9]+@gmail.com","[[0-2][0-9]|3[0-1]][.][0-9]{2}[.][0-9]{4}","[a-z]", "[0-9]{4}", "d[iuü][km]", "x[a-z]"];
 const word = 
-    ["Bir iki üç dört beş altı ", "Bugün 23/6/2018 saat 14",
+    [ "my mail is feyzanur.saka@gmail.com","The meeting date is 21.09.2019",
+	 "Bir iki üç dört beş altı ", "Bugün 23/6/2018 saat 14",
      "Geldim gördüm buldum...", "Excellent expression tax "];
 function setValues() {
     pat.value = ptrn[menu.selectedIndex];
@@ -80,6 +81,8 @@ function checkRE() {
 			<div class="filtre">
 			<article>
 				<h2>Descriptions of Patterns</h2>
+				<p>[a-z._0-9]+@gmail.com : End of sentence should end with "@ gmail.com". May contain lowercase, ".", and "_".</p>
+				<p>[[0-2][0-9]|3[0-1]][.][0-9]{2}[.][0-9]{4} : If the day part is between 0-29 : [0-2] [0-9], if it is 30 or 31 : 3[0-1]. Divided by day and month with dots [.]. The month is composed of 2 digits 0-9 : [0-9]{2}. Divided by year point with the moon [.]. The year is composed of 4 digits 0-9 : [0-9]{4}. </p>
 				<p>[a-z] : Find all lowercase letters in the alphabet.</p>
 				<p>[0-9]{4} : Find four of the numbers from 0 to 9, along with four.</p>
 				<p>d[iuü][km] : Find d letter, one of the letters i or ü or u, one of the letters k or m, that come one after another.</p>
